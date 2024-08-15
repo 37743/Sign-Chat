@@ -1,4 +1,14 @@
 # SIGN CHAT
+
+<a>
+  <p align="center">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="app/doc/images/Readme_assets/BG.png">
+      <img height="200px" src="Snapshots\mainlogo3.png">
+    </picture>
+  </p>
+</a>
+
 ## Introduction:
 - SIGN CHAT© was a phone application project that transforms written natural languages (e.g., English) to a series of ASL gestures on a grid display and vice versa.
 - Development plans included usage of computer vision to implement a real-time detection of hand and facial gestures through the mobile phone's camera.
