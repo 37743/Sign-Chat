@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/Splashscreen.gd" type="Script" id=1]
+[ext_resource path="res://Effects/ParallaxBackground.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Effects/ParallaxBackgroundFront1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/splashbutton1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/splashbutton2.png" type="Texture" id=5]
+[ext_resource path="res://Effects/Fade_in.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Effects/Fade_out.tscn" type="PackedScene" id=7]
+
+[node name="Splashscreen" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Splashbackground" type="ParallaxBackground" parent="."]
+scroll_ignore_camera_zoom = true
+
+[node name="Mainbg1" parent="Splashbackground" instance=ExtResource( 2 )]
+
+[node name="Mainbg2" parent="Splashbackground" instance=ExtResource( 3 )]
+
+[node name="Splashbutton1" type="TextureButton" parent="Splashbackground"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+
+[node name="Fade" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="Fade2" parent="." instance=ExtResource( 7 )]
+visible = false
+[connection signal="pressed" from="Splashbackground/Splashbutton1" to="." method="_on_Splashbutton1_pressed"]
+[connection signal="fade_finished" from="Fade" to="." method="_on_Fade_fade_finished"]
+[connection signal="fade_finished" from="Fade2" to="." method="_on_Fade2_fade_finished"]

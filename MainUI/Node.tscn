@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Hi.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Schoolprojecthand1hover.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Goodbye.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Schoolprojecthand2hover.png" type="Texture" id=4]
+
+
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 90.0
+
+[node name="Node" type="Node" index="0"]
+
+[node name="Control" type="Control" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Control" index="0"]
+
+position = Vector2( 21.3198, 1208.73 )
+scale = Vector2( 1.47637, 1.50546 )
+normal = ExtResource( 1 )
+pressed = ExtResource( 2 )
+bitmask = null
+shape = SubResource( 1 )
+shape_centered = true
+shape_visible = false
+passby_press = false
+action = ""
+visibility_mode = 0
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="Control" index="1"]
+
+position = Vector2( 421.32, 1208.73 )
+scale = Vector2( 1.47637, 1.50546 )
+normal = ExtResource( 3 )
+pressed = ExtResource( 4 )
+bitmask = null
+shape = SubResource( 1 )
+shape_centered = true
+shape_visible = false
+passby_press = false
+action = ""
+visibility_mode = 0
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+

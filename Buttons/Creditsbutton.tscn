@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buttons/buttontemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Startbutton.gd" type="Script" id=2]
+
+[node name="Creditsbutton" index="0" instance=ExtResource( 1 )]
+
+margin_bottom = 60.0
+script = ExtResource( 2 )
+scene_to_load = "res://Screens/Credits.tscn"
+
+[node name="Label" parent="." index="0"]
+
+text = "Students"
+
+

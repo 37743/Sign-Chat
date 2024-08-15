@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://SFX_/BeneathTheMask.wav" type="AudioStream" id=1]
+[ext_resource path="res://Scripts/AudioStreamPlayer.gd" type="Script" id=2]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+
+stream = ExtResource( 1 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Music"
+script = ExtResource( 2 )
+_sections_unfolded = [ "Pause" ]
+
+
